@@ -84,6 +84,7 @@ class RainCard extends HTMLElement {
 		this._config = cardConfig;
 		
 		this.result = [];
+		// @bouwew: Use initial values instead of empty lists
 		this.time = ["12:00", "12:05", "12:10", "12:15", "12:20", "12:25", "12:30", "12:35", "12:40", "12:45", "12:50", "12:55", "13:00", "13:05", "13:10", "13:15", "13:20", "13:25", "13:30", "13:35", "13:40", "13:45", "13:50", "13:55"];
 		this.rainfall = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 		this.drawGraph = true;
@@ -146,6 +147,7 @@ class RainCard extends HTMLElement {
 							type: 'line',
 							mode: 'horizontal',
 							scaleID: 'y-axis-0',
+							// @bouwew: adapt value
 							value: 25,
 							borderColor: 'white',
 							borderWidth: 1,
@@ -161,6 +163,7 @@ class RainCard extends HTMLElement {
 							type: 'line',
 							mode: 'horizontal',
 							scaleID: 'y-axis-0',
+							// @bouwew: adapt value
 							value: 5,
 							borderColor: 'white',
 							borderWidth: 1,
@@ -283,6 +286,7 @@ class RainCard extends HTMLElement {
 			this.ctx = element;
 			this.chart = new Chart(this.ctx, this.initconfig);
 
+			// @bouwew: workin quick initial graph-update
 			setTimeout(function() {
 				_this.updateGraph();
 				}, 100);
