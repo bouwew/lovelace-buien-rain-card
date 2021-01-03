@@ -4,6 +4,11 @@ www.lukevink.com
 
 August 2020, Edited a bit by @spudje
 Included chartjs-plugin-annotation.js version: 0.5.7 at the bottom
+
+January 2021, updates by @bouwew:
+- correct/update limits for licht, matig, zwaar
+- improve/fix initial updating
+
 */
 
 class RainCard extends HTMLElement {
